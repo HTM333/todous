@@ -43,10 +43,14 @@ function Eject(){
                 obj.cancel()
             },100)
         })
+        var d =  $('<div class="confirmDiv"></div>').append(confirmcancel).append(confirmBtn);
+        // var d = `<div class="confirmDiv">${confirmBtn}${confirmcancel}</div>`;
+        // confirmBox.append(confirmcancel);
+        // confirmBox.append(confirmBtn);
+
         confirmBox.append(confirmHead);
         confirmBox.append(confirmMes);
-        confirmBox.append(confirmBtn);
-        confirmBox.append(confirmcancel);
+        confirmBox.append(d);
         qback.append(confirmBox);
         $('body').append(qback);
         // confirmBox.css({'marginTop':-confirmBox.outerHeight()/2+'px'});
