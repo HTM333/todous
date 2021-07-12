@@ -42,7 +42,7 @@ function RemoteControlBySvg (group,operation,timeout,javaIp,token) {
                     Ealt.Etoast('指令下发成功！',2)
                 },
                 fail: function (err) {
-                    console.log(err)
+                    Ealt.Etoast('指令下发失败！',2)
                 }
             })
         },
