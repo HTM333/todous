@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <!--这个可以将默认的方法缩小方法屏蔽-->
+        <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <script type="text/javascript">  
+            mxBasePath = '../components/src'; 
+        </script> 
+    
+        <!-- 引入graph需要的文件 -->  
+        <script type="text/javascript" src="../components/src/js/mxClient.js"></script>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>  
+        <!-- 导出/入 转换为xml文件与json文件 -->
+        <script type="text/javascript" src="http://www.jsons.cn/Down/jquery.json2xml.js"></script>
+        <script type="text/javascript" src="http://www.jsons.cn/Down/jquery.xml2json.js"></script>        
+        <!-- 连接后台的两个js文件 -->
+        <script src="https://cdn.bootcss.com/sockjs-client/1.1.4/sockjs.min.js"></script>
+        <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+        <!-- 连接后台 -->
+        <script type="text/javascript" src="../js/Websocket.js"></script>
+        <!-- 渲染xml文件 -->
+        <script src="../js/voddt.js"></script>
+        <!-- 手动输入地址 获取页面参数 -->
+        <script src="../js/common.js"></script>
+    </head>
+    <body onload="" style="overflow: auto;">
+        <div id="graphContainer">
+        </div>
+    </body>
+</html>
+
+<style type="text/css">
+    /* 谷歌新版本的特性，不添加不能去掉屏蔽浏览器默认行为 */
+    /* * { touch-action: pan-y; } */
+    #graphContainer {
+        position: relative;
+        width: 1858px;
+        height: 973px;
+        border: 1px solid gray;
+        cursor: default;
+        touch-action: manipulation;
+        margin-bottom: 5px;
+    }
+</style>
+<script>
+    window.onload = function () {
+        // 默认路径：http://127.0.0.1:5503/src/components/index.html
+        // 带参数路径(页面名称、srcId)：http://127.0.0.1:5503/src/components/index.html?pagename=PowerGeneration&srcid=SRC02
+        
+        //页面名称
+        var pageName=getQueryVariable("pagename") || "test"
+        
+        //页面对应的xml路径
+        var url='../xml/'+pageName+'.xml'
+
+        //访问后台的参数
+        var srcId=getQueryVariable("srcid") || "SRC002"
+        
+        //放置画板的div
+        var container=document.getElementById('graphContainer')
+
+        //调用voddt.js的main方法
+        main(container, srcId, pageName,url)
+        document.getElementById('graphContainer').style.touchAction = 'manipulation';
+    }
+</script>

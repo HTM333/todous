@@ -1,0 +1,7 @@
+<mxGraphModel background="../assets/bg/bg2.png">
+  <root>
+    <mxCell id="0" value="默认页面" style="shape=rounded;fillColor=#c3d9ff;fontColor=#f45c1a;fontStyle=1;fontSize=26;strokeWidth=1;strokeColor=#6482b9;dashed=0;" vertex="1" parent="1" CUSTOM_TEXT_VARIABLE="" CUSTOM_COLOR_VARIABLE="" CUSTOM_COLORSELECTONE="" CUSTOM_COLORSELECTTWO="" CUSTOM_COLORSELECTTHREE="" CUSTOM_COLOR_ONE_VALUE="#ff0000" CUSTOM_COLOR_TWO_VALUE="#ffff00" CUSTOM_COLOR_THREE_VALUE="#33ff00">
+      <mxGeometry x="230" y="110" width="360" height="50" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>

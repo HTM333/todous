@@ -1,0 +1,136 @@
+.notclick{
+    pointer-events: none;
+    background-color: rgb(240, 238, 238);
+    opacity: 0.6;
+}
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+
+#dr{
+    margin-top: 2px;
+    margin-left: 25px;
+}
+
+/* 更换背景按钮 */
+#bgbut{
+    width: 75px;        
+    margin-left: 225px;
+}
+
+/* 隐藏 */
+.hide{
+    display: none;
+}
+
+/* 遮罩层 */
+.shade{
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 9;
+}
+
+/* 更改图形、线型属性对话框 */
+.mode,.edgeMode,.customMode{
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width:500px;
+    left: 90%;
+    background-color: white;
+    margin-left: -260px;
+    z-index: 10;
+    overflow-y:scroll; 
+}
+#quxiao,#customQuxiao,#edgeQuxiao{
+    margin-left: 110px;
+}
+#submit,#quxiao,#customQuxiao,#customSubmit,#edgeSubmit,#edgeQuxiao{
+    width: 65px;
+}
+/* 更改背景对话框 */
+.bgMode{
+   position: relative;
+   left: 200px;
+   z-index: 10;
+   background-color: white;
+   width:390px;
+   height:270px;
+   border:1px solid black;
+}
+/* 表单 */
+#formId>h2{
+    margin-top: -85px;
+    text-align: center;
+}
+form>div{
+    margin-top: 8px;
+}  
+
+/* 背景属性表单 */
+#bgformId{
+    text-align: center;
+    margin: auto;
+    height: 200px;
+    width: 250px;
+}
+#bgformId>#buts{
+    text-align: center;
+    width: 100%;
+    margin-top: 60px;
+}
+#bgquxiao{
+    margin-left: 145px;
+}
+#bgformId>div{
+    display: flex;
+}
+/* 提示ID */
+.toop{
+    color: red;
+}
+
+/* 添加图标对话框 */
+.iconMode{
+    position: relative;
+    left: 310px;
+    top:100px;
+    z-index: 10;
+    background-color: white;
+    width:650px;
+    height:300px;
+    border:1px solid black;
+}
+#iconFormId{
+    text-align: center;
+    margin: auto;
+    height: 250px;
+    width: 100%;
+}
+#iconFormId>#buts{
+    text-align: center;
+}
+#iconQuxiao{
+    margin-left: 70px;
+}
+#result{
+    margin-top: -10px;
+    /* border:1px solid red; */
+    width: 100%;
+    height: 150px;
+}
+
+/* 提示选择图标 */
+#iconTip{
+    color: red;
+}
+/* 动态三种颜色选择 */
+#ColorOneVal,#ColorTwoVal,#ColorThreeVal{
+    height: 20px;
+}
