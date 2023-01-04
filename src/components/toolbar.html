@@ -13,7 +13,8 @@
   <script type="text/javascript" src="../components/src/js/mxClient.js"></script>
   <script src="../js/jquery-3.5.1.min.js"></script>
   <!-- 导出/入 转换为xml文件与json文件 -->
-  <script type="text/javascript" src="http://www.jsons.cn/Down/jquery.json2xml.js"></script>
+  <!-- <script type="text/javascript" src="http://www.jsons.cn/Down/jquery.json2xml.js"></script> -->
+  <script type="text/javascript" src="./src/js/jquery.json2xml.js"></script>
   <!-- <script type="text/javascript" src="http://www.jsons.cn/Down/jquery.xml2json.js"></script> -->
   <script>
     /*
@@ -634,7 +635,7 @@ Website: http://www.fyneworks.com/jquery/xml-to-json/
                     graph.setCellStyles(mxConstants.STYLE_FONTSIZE,customSelectFontSize,[cells])
                     //跳转路径
                     cells.CUSTOM_COLOR_JUMPPATH=customJumpPathVal
-                    //高宽
+                    //高宽 
                     var geo=graph.getCellGeometry(cell)
                     geo=geo.clone()
                     geo.width=parseInt(customWidth)
@@ -820,7 +821,8 @@ Website: http://www.fyneworks.com/jquery/xml-to-json/
         var cells=new Array()
         //复制
         var ls_button=mxUtils.button('复制',function(evt) {
-          cells=graph.getSelectionCells()
+          cells=graph.getSelectionCells();
+          console.log(mxClipboard,'mxClipboard');
           mxClipboard.copy(graph,cells)
           mxClipboard.paste(graph)
         });
@@ -1276,7 +1278,7 @@ Website: http://www.fyneworks.com/jquery/xml-to-json/
             let edge=edges[i]
             geometry=edge.mxGeometry
             // console.log(edge)
-            // console.log(edge.source)    
+            // console.log(edge.source)
             graph.insertEdge(
               parent,
               null,
